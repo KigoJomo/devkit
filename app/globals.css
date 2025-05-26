@@ -1,26 +1,181 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #202020;
+  --background-light: #363636;
+
+  --foreground: #ededed;
+  --foreground-light: #c4c4c4;
+
+  --accent: #1267dd;
+
+  --font-size: 0.95rem;
+  --font-ratio: 1.35;
+}
+
+[data-theme='light'] {
+  --foreground: #202020;
+  --foreground-light: #363636;
+
+  --background: #ededed;
+  --background-light: #c4c4c4;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-ratio: 1.25;
+    --font-size: 0.9rem;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-light: var(--background-light);
+  
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-light: var(--foreground-light);
+  --color-accent: var(--accent);
+
+  --font-roboto: var(--font-roboto);
+  --font-lex: var(--font-lex);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: calc(
+    var(--font-size) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)
+  );
+}
+
+h2 {
+  font-size: calc(var(--font-size) * var(--font-ratio) * var(--font-ratio));
+}
+
+h3 {
+  font-size: calc(var(--font-size) * var(--font-ratio));
+}
+
+h4,
+p,
+li {
+  font-size: calc(var(--font-size));
+}
+
+p,
+li,
+a,
+td {
+  font-weight: 300;
+}
+
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 400;
+}
+
+input[type='checkbox']:not(:checked) {
+  background-color: transparent;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+hr {
+  border-color: color-mix(in oklab, var(--foreground-light) 25%, transparent);
+  /* margin: 0 !important; */
+}
+
+* {
+  box-sizing: border-box;
+  & *::selection {
+    /* background-color: var(--color-gray-500); */
+    @apply bg-accent/30;
+  }
+  &::selection {
+    /* background-color: var(--color-gray-500) */
+    @apply bg-accent/30;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  width: 100vw;
+  height: 100dvh;
+  transition: height .3s ease-in-out;
+  padding: 0;
+
+  body {
+    height: 100dvh;
+    transition: height .3s ease-in-out;
+
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-lex);
+
+    main {
+      /* header{} */
+
+      section {
+        width: 100%;
+        padding: 0rem 2rem;
+      }
+
+      @media (width < 40rem) {
+        section {
+          padding: 1rem 1.2rem;
+        }
+      }
+
+      @media (width >= 48rem /* md */) {
+        section {
+          padding: 1rem 2rem;
+        }
+      }
+
+      @media (width >= 64rem /* lg */) {
+        section {
+          padding: 1rem 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 40rem) {
+  .custom-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--foreground-light);
+  border-radius: 12px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
