@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Random Tools 😝
+
+> _Because apparently the internet doesn't have enough random utility websites already..._
+
+Welcome to **Random Tools** - a delightfully chaotic collection of utilities that you never knew you needed until you desperately did. This is where useful tools come to live their best life, one TypeScript component at a time.
+
+## What's This All About?
+
+This project is a growing arsenal of web-based tools that solve those oddly specific problems you encounter when you're deep in development hell. Currently featuring:
+
+- **🔍 URL Comparison Tool** - Because manually comparing URLs character by character is so 2023
+
+_That's it for now. Riveting, right?_
+
+## The Grand Vision
+
+This humble collection has **tremendous room for growth** (translation: it's basically empty and needs your help). The architecture is built to scale from "meh" to "actually useful" with minimal effort. Each tool is:
+
+- ✨ **Modular** - Drop in new tools like hot mixtapes
+- 🎨 **Styled with TailwindCSS** - Because consistency is key
+- 🔧 **TypeScript Everything** - Type safety or bust
+- ♿ **Accessible** - We don't discriminate against screen readers
+- 📱 **Responsive** - Works on your phone, tablet, and that ancient laptop
 
 ## Getting Started
 
-First, run the development server:
+_The usual Next.js dance:_
 
 ```bash
+# Clone this masterpiece
+git clone https://github.com/KigoJomo/random-tools
+cd random-tools
+
+# Install the dependencies (there are many)
+npm install
+
+# Fire up the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` and witness the glory of... a search bar and one lonely tool card.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**This project NEEDS contributors** like a plant needs water. Seriously, the current tool count is embarrassingly low.
 
-## Learn More
+### How to Add a New Tool:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Create your utility functions** in `lib/utils/yourTool.ts`
+2. **Build the page** in `app/your-tool/page.tsx`
+3. **Add it to the registry** in `lib/config/tools.ts`
+4. **Pat yourself on the back** - you've just made this project 50% more useful
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Tool Ideas (Because We're Running Low):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Password generators
+- Color palette extractors
+- JSON formatters/validators
+- Base64 encoders/decoders
+- QR code generators
+- Text diff tools
+- Hash generators
+- Lorem ipsum generators
+- _Literally anything you wish existed when you're deep in development hell_
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+├── app/                    # Next.js app router pages
+├── lib/
+│   ├── components/         # Reusable React components
+│   ├── config/            # Tool registry and configuration
+│   └── utils/             # Utility functions for tools
+└── public/                # Static assets (currently just favicon)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- **Next.js 15** - Because we like living on the edge
+- **React 19** - The latest and greatest
+- **TypeScript** - Type safety is not optional
+- **TailwindCSS** - Utility-first styling
+- **Framer Motion** - For those smooth animations (when we add them)
+
+## Contributing Guidelines
+
+- Write TypeScript (obviously)
+- Follow the existing patterns (they're actually decent)
+- Test your stuff locally before submitting
+- Add your tool to the registry
+- Keep it accessible
+- Don't break things (please)
+
+## License
+
+MIT - Because sharing is caring and lawyers are expensive.
+
+---
+
+_Built with ❤️ and a healthy dose of procrastination. Now stop reading and start contributing!_
