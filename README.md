@@ -9,8 +9,9 @@ Welcome to **Random Tools** - a delightfully chaotic collection of utilities tha
 This project is a growing arsenal of web-based tools that solve those oddly specific problems you encounter when you're deep in development hell. Currently featuring:
 
 - **🔍 URL Comparison Tool** - Because manually comparing URLs character by character is so 2023
+- **🔗 Slug Generator** - Transform any text into URL-friendly slugs with implementation code in TypeScript, JavaScript, and Python
 
-_That's it for now. Riveting, right?_
+_Still growing, but getting more useful!_
 
 ## The Grand Vision
 

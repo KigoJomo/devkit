@@ -10,7 +10,7 @@ export interface InputProps {
     | 'textarea'
     | 'date'
     | 'checkbox';
-  label: string | ReactNode;
+  label?: string | ReactNode;
   name: string;
   value?: string | number | boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
@@ -59,7 +59,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
     // Default classes that match the existing form styling
     const defaultInputClass =
       type !== 'checkbox'
-        ? 'w-full p-3 border border-background-light rounded-lg focus:outline-none focus:border-foreground-light transition-all duration-300'
+        ? 'w-full p-2 border border-background-light rounded-lg focus:outline-none focus:border-foreground-light transition-all duration-300'
         : 'h-4 w-4 accent-foreground text-primary focus:ring-primary border-background rounded';
 
     const defaultLabelClass =
@@ -67,7 +67,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
         ? 'block text-sm font-medium text-foreground-light mb-1'
         : 'ml-2 block text-sm text-foreground-light';
 
-    const wrapperClass = type === 'checkbox' ? 'flex items-center' : 'mb-4';
+    const wrapperClass = type === 'checkbox' ? 'flex items-center' : '';
 
     // Build input JSX based on type
     const inputElement =
@@ -122,15 +122,19 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
           </>
         ) : (
           <>
-            <div className="flex items-center justify-between mb-1">
-              <label
-                htmlFor={inputId}
-                className={`${defaultLabelClass} ${labelClassName}`}>
-                {label}
-                {required && <span className="text-red-500 ml-1">*</span>}
-              </label>
-              {rightElement}
-            </div>
+            {label ? (
+              <div className="flex items-center justify-between mb-1">
+                <label
+                  htmlFor={inputId}
+                  className={`${defaultLabelClass} ${labelClassName}`}>
+                  {label}
+                  {required && <span className="text-red-500 ml-1">*</span>}
+                </label>
+                {rightElement}
+              </div>
+            ) : (
+              required && <span className="text-red-500 ml-1">*</span>
+            )}
             {inputElement}
           </>
         )}

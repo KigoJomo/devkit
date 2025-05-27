@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from 'next';
 import { Roboto, Lexend } from 'next/font/google';
-import "./globals.css";
+import './globals.css';
 
 const roboto = Roboto({
   variable: '--font-roboto',
@@ -13,8 +13,12 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Random Tools",
-  description: "A collection of random tools and utilities",
+  title: 'Random Tools',
+  description: 'A collection of random tools and utilities',
+};
+
+export const viewport: Viewport = {
+  interactiveWidget: 'resizes-content',
 };
 
 export default function RootLayout({
@@ -23,11 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="hide-scrollbar">
       <body
-        className={`${roboto.variable} ${lexend.variable} antialiased`}
-      >
-        {children}
+        className={`${roboto.variable} ${lexend.variable} antialiased overflow-x-hidden flex`}>
+        <main>{children}</main>
       </body>
     </html>
   );

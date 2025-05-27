@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import Input from '@/lib/components/ui/Input';
 import Button from '@/lib/components/ui/Button';
 import Card from '@/lib/components/ui/Card';
 import { compareUrls, UrlComparison } from '@/lib/utils/urlComparison';
+import BackToTools from '@/lib/components/navigation/BackToTools';
 
 const CompareUrlsPage = () => {
   const [url1, setUrl1] = useState('');
@@ -66,15 +66,11 @@ const CompareUrlsPage = () => {
   };
 
   return (
-    <section className="min-h-screen py-12">
+    <section className="min-h-screen">
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">
-          <Link
-            href="/"
-            className="inline-block text-foreground-light hover:text-foreground mb-4">
-            ← Back to Tools
-          </Link>
+          <BackToTools />
           <h1 className="text-3xl font-bold">Compare URLs</h1>
           <p className="text-foreground-light">
             Compare two URLs and analyze their structural differences

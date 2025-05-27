@@ -16,7 +16,23 @@ export const tools: Tool[] = [
     category: 'Web',
     tags: ['url', 'compare', 'analysis', 'web', 'development'],
   },
-  // Add more tools here as they are created
+  {
+    id: 'slug-generator',
+    name: 'Slug Generator',
+    description:
+      'Generate URL-friendly slugs from text with code examples in multiple languages',
+    href: '/slug-generator',
+    category: 'Text',
+    tags: [
+      'slug',
+      'url',
+      'text',
+      'generator',
+      'javascript',
+      'typescript',
+      'python',
+    ],
+  },
 ];
 
 export function searchTools(query: string): Tool[] {
