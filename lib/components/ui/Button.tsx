@@ -4,6 +4,7 @@ import Link from 'next/link';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   href?: string;
+  target?: '_blank' | '_self';
   variant?: 'primary' | 'outline' | "danger";
   size?: 'default' | 'sm' | 'lg';
   className?: string;
@@ -14,6 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({
   children,
   href,
+  target,
   variant = 'primary',
   size = 'default',
   className = '',
@@ -46,7 +48,7 @@ const Button: React.FC<ButtonProps> = ({
   // If href is provided, render as Link
   if (href) {
     return (
-      <Link href={href}>
+      <Link href={href} target={target}>
         <button
           type={type}
           className={buttonStyles}

@@ -4,6 +4,9 @@ import { useState, useMemo } from 'react';
 import Input from '@/lib/components/ui/Input';
 import { tools, searchTools } from '@/lib/config/tools';
 import ToolCard from '@/lib/components/ui/ToolCard';
+import Button from '@/lib/components/ui/Button';
+import Card from '@/lib/components/ui/Card';
+import { Github, Plus } from 'lucide-react';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -55,6 +58,32 @@ export default function Home() {
               </p>
             </div>
           )}
+        </div>
+
+        {/* Contribute CTA */}
+        <div className="contribute-cta">
+          <Card className="text-center border-dashed border-2 border-foreground-light/30 bg-gradient-to-br from-background to-background-light hover:border-foreground-light/50">
+            <div className="flex flex-col items-center gap-4 py-4">
+              <div className="flex items-center gap-2 text-foreground-light">
+                <Plus className="w-5 h-5" />
+                <span className="text-lg font-medium">
+                  Have an idea for a tool?
+                </span>
+              </div>
+              <p className="text-foreground-light/80 max-w-md">
+                Contribute your ideas or help build new tools for the community.
+                All contributions are welcome!
+              </p>
+              <Button
+                href="https://github.com/KigoJomo/random-tools"
+                target="_blank"
+                variant="outline"
+                className="flex items-center gap-2">
+                <Github className="w-4 h-4" />
+                Contribute on GitHub
+              </Button>
+            </div>
+          </Card>
         </div>
 
         {searchQuery && (
