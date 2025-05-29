@@ -12,15 +12,15 @@ export default function SlugGeneratorPage() {
   const implemenations: Tab[] = [
     {
       title: 'TypeScript',
-      content: slugifyTypescript,
+      content: <MarkdownRenderer markDowncontent={slugifyTypescript} />,
     },
     {
       title: 'JavaScript',
-      content: slugifyJavascript,
+      content: <MarkdownRenderer markDowncontent={slugifyJavascript} />,
     },
     {
       title: 'Python',
-      content: slugifyPython,
+      content: <MarkdownRenderer markDowncontent={slugifyPython} />,
     },
   ];
 

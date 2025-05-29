@@ -10,14 +10,15 @@ This project is a growing arsenal of web-based tools that solve those oddly spec
 
 - **🔍 URL Comparison Tool** - Compare two URLs and analyze their differences in detail
 - **🔗 Slug Generator** - Transform any text into URL-friendly slugs with implementation code in TypeScript, JavaScript, and Python
+- **📚 Git Reference** - Complete Git command reference with SSH setup, GitHub CLI guides, and advanced workflows
 
-_Still growing, but getting more useful!_
+_Growing stronger by the day!_
 
 ## The Grand Vision
 
-This humble collection has **tremendous room for growth** (translation: it's basically empty and needs your help). The architecture is built to scale from "meh" to "actually useful" with minimal effort. Each tool is:
+This humble collection has **tremendous room for growth** but is steadily becoming more useful. The architecture is built to scale from "meh" to "actually useful" with minimal effort. Each tool is:
 
-- ✨ **Modular** - Drop in new tools like hot mixtapes
+- ✨ **Modular** - Drop in new tools like Tetris blocks
 - 🎨 **Styled with TailwindCSS** - Because consistency is key
 - 🔧 **TypeScript Everything** - Type safety or bust
 - ♿ **Accessible** - We don't discriminate against screen readers
@@ -39,11 +40,11 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:3000` and witness the glory of a clean search interface with two functional tools.
+Visit `http://localhost:3000` and witness the glory of a clean search interface with three functional tools.
 
 ## Contributing
 
-**This project NEEDS contributors** like a plant needs water. Seriously, the current tool count is embarrassingly low.
+**This project NEEDS contributors** like a plant needs water. We're making progress but there's always room for more useful tools.
 
 ### How to Add a New Tool:
 
@@ -55,18 +56,18 @@ Visit `http://localhost:3000` and witness the glory of a clean search interface 
 
 ### Tool Ideas (Because We're Always Hungry for More):
 
-- Password generators
-- Color palette extractors
-- JSON formatters/validators
-- Base64 encoders/decoders
-- QR code generators
-- Text diff tools
+- Password generators with strength indicators
+- Color palette generators and extractors
+- JSON formatters/validators with syntax highlighting
+- Base64 encoders/decoders for text and files
+- QR code generators with customization
+- Text diff tools with multiple view modes
 - Hash generators (MD5, SHA256, etc.)
 - Lorem ipsum generators
 - UUID generators
 - Timestamp converters
-- CSS minifiers
-- Regular expression testers
+- CSS minifiers and formatters
+- Regular expression testers with examples
 - _Literally anything you wish existed when you're deep in development hell_
 
 ## Project Structure
@@ -75,10 +76,11 @@ Visit `http://localhost:3000` and witness the glory of a clean search interface 
 ├── app/                    # Next.js app router pages
 │   ├── compare-urls/       # URL comparison tool page
 │   ├── slug-generator/     # Slug generator tool page
+│   ├── git/               # Git reference guide page
 │   └── page.tsx           # Homepage with search and tool listing
 ├── lib/
 │   ├── components/         # Reusable React components
-│   │   └── ui/            # UI components (Input, ToolCard, etc.)
+│   │   └── ui/            # UI components (Input, ToolCard, Tabs, etc.)
 │   ├── config/            # Tool registry and configuration
 │   │   └── tools.ts       # Central tool registry with search
 │   └── utils/             # Utility functions for tools
@@ -101,8 +103,9 @@ Visit `http://localhost:3000` and witness the glory of a clean search interface 
 - **🔍 Smart Search** - Search tools by name, description, category, or tags
 - **📱 Fully Responsive** - Works beautifully on all device sizes
 - **⚡ Fast Development** - Hot reload with Turbopack
-- **🎨 Consistent UI** - Reusable component system
+- **🎨 Consistent UI** - Reusable component system with tabbed interfaces
 - **📖 Code Examples** - Tools include implementation examples in multiple languages
+- **📚 Reference Guides** - Comprehensive guides with syntax highlighting and organized sections
 
 ## Contributing Guidelines
 

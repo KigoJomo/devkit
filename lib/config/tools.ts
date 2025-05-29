@@ -33,6 +33,15 @@ export const tools: Tool[] = [
       'python',
     ],
   },
+  {
+    id: 'git-reference',
+    name: 'Git Reference',
+    description:
+      'Quick reference for common Git commands, SSH setup, and GitHub CLI usage',
+    href: '/git',
+    category: 'Development',
+    tags: ['git', 'version-control', 'ssh', 'github', 'cli', 'reference'],
+  },
 ];
 
 export function searchTools(query: string): Tool[] {

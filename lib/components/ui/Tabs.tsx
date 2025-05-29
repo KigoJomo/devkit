@@ -1,11 +1,10 @@
 'use client';
 
 import { FC, ReactNode, useEffect, useState } from 'react';
-import MarkdownRenderer from '@/lib/components/ui/MarkdownRenderer';
 
 export interface Tab {
   title: string | ReactNode;
-  content: string;
+  content: string | ReactNode;
 }
 
 interface TabsProps {
@@ -41,10 +40,13 @@ const Tabs: FC<TabsProps> = ({ tabs }) => {
 
       {/* content */}
       <div className="w-full">
-        <MarkdownRenderer
-          markDowncontent={activeTab.content}
-          className=""
-        />
+        {typeof activeTab.content === 'string' ? (
+          <pre className="whitespace-pre-wrap break-words text-sm">
+            {activeTab.content}
+          </pre>
+        ) : (
+          activeTab.content
+        )}
       </div>
     </div>
   );
