@@ -13,8 +13,16 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://randomtools.vercel.app'),
   title: 'Random Tools',
   description: 'A collection of random tools and utilities',
+  openGraph: {
+    title: 'Random Tools',
+    description: 'Welcome to Random Tools',
+    url: 'https://randomtools.vercel.app',
+    siteName: 'Random Tools',
+    images: [{ url: 'https://randomtools.vercel.app/images/og.webp' }],
+  },
 };
 
 export const viewport: Viewport = {
