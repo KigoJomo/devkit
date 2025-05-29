@@ -7,6 +7,20 @@ import {
   slugifyTypescript,
 } from '@/lib/utils/slugGen';
 import MarkdownRenderer from '@/lib/components/ui/MarkdownRenderer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Slug Generator | Random Tools',
+  description: 'Generate slugs from your text or get the slugify code in different programming languages.',
+  openGraph: {
+    title: 'Slug Generator',
+    description: 'Generate slugs from your text or get the slugify code in different programming languages.',
+    type: 'website',
+    url: 'https://randomtools.vercel.app/slug-generator',
+    siteName: 'Random Tools',
+    images: [{ url: 'https://randomtools.vercel.app/images/og.webp' }],
+  },
+}
 
 export default function SlugGeneratorPage() {
   const implemenations: Tab[] = [

@@ -15,10 +15,11 @@ const lexend = Lexend({
 export const metadata: Metadata = {
   metadataBase: new URL('https://randomtools.vercel.app'),
   title: 'Random Tools',
-  description: 'A collection of random tools and utilities',
+  description: 'A collection of random tools and utilities for devs and enthusiasts',
   openGraph: {
     title: 'Random Tools',
-    description: 'Welcome to Random Tools',
+    description: 'A collection of random tools and utilities for devs and enthusiasts',
+    type: 'website',
     url: 'https://randomtools.vercel.app',
     siteName: 'Random Tools',
     images: [{ url: 'https://randomtools.vercel.app/images/og.webp' }],

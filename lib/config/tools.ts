@@ -9,14 +9,6 @@ export interface Tool {
 
 export const tools: Tool[] = [
   {
-    id: 'compare-urls',
-    name: 'Compare URLs',
-    description: 'Compare two URLs and analyze their differences in detail',
-    href: '/compare-urls',
-    category: 'Web',
-    tags: ['url', 'compare', 'analysis', 'web', 'development'],
-  },
-  {
     id: 'slug-generator',
     name: 'Slug Generator',
     description:
@@ -41,6 +33,14 @@ export const tools: Tool[] = [
     href: '/git',
     category: 'Development',
     tags: ['git', 'version-control', 'ssh', 'github', 'cli', 'reference'],
+  },
+  {
+    id: 'compare-urls',
+    name: 'Compare URLs',
+    description: 'Compare two URLs and analyze their differences in detail',
+    href: '/compare-urls',
+    category: 'Web',
+    tags: ['url', 'compare', 'analysis', 'web', 'development'],
   },
 ];
 
