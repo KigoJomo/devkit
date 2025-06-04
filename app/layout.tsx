@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://randomtools.vercel.app'),
   title: 'Random Tools',
   description:
-    'A collection of random tools and utilities for devs and enthusiasts',
+    'A collection of random tools, snippets, and utilities for devs and enthusiasts',
   openGraph: {
     title: 'Random Tools',
     description:
-      'A collection of random tools and utilities for devs and enthusiasts',
+      'A collection of random tools, snippets, and utilities for devs and enthusiasts',
     type: 'website',
     url: 'https://randomtools.vercel.app',
     siteName: 'Random Tools',

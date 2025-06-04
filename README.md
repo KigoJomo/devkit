@@ -8,9 +8,10 @@ Welcome to **Random Tools** - a delightfully chaotic collection of utilities tha
 
 This project is a growing arsenal of web-based tools that solve those oddly specific problems you encounter when you're deep in development hell. Currently featuring:
 
-- **🔍 URL Comparison Tool** - Compare two URLs and analyze their differences in detail
 - **🔗 Slug Generator** - Transform any text into URL-friendly slugs with implementation code in TypeScript, JavaScript, and Python
 - **📚 Git Reference** - Complete Git command reference with SSH setup, GitHub CLI guides, and advanced workflows
+- **🔍 URL Comparison Tool** - Compare two URLs and analyze their differences in detail
+- **💰 Price Formatter** - Format prices with currency symbols, thousands separators, and decimals in multiple programming languages
 
 _Growing stronger by the day!_
 
@@ -40,7 +41,7 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:3000` and witness the glory of a clean search interface with three functional tools.
+Visit `http://localhost:3000` and witness the glory of a clean search interface with four functional tools.
 
 ## Contributing
 
@@ -77,13 +78,19 @@ Visit `http://localhost:3000` and witness the glory of a clean search interface 
 │   ├── compare-urls/       # URL comparison tool page
 │   ├── slug-generator/     # Slug generator tool page
 │   ├── git/               # Git reference guide page
+│   ├── price-formatter/   # Price formatter tool page
+│   ├── loading.tsx        # Global loading component
 │   └── page.tsx           # Homepage with search and tool listing
 ├── lib/
 │   ├── components/         # Reusable React components
+│   │   ├── navigation/    # Navigation components (BackToTools)
 │   │   └── ui/            # UI components (Input, ToolCard, Tabs, etc.)
 │   ├── config/            # Tool registry and configuration
 │   │   └── tools.ts       # Central tool registry with search
 │   └── utils/             # Utility functions for tools
+│       ├── gitContent.ts  # Git reference content
+│       ├── priceFormat.ts # Price formatting utilities
+│       └── slugGen.ts     # Slug generation utilities
 └── public/                # Static assets
 ```
 
@@ -106,6 +113,8 @@ Visit `http://localhost:3000` and witness the glory of a clean search interface 
 - **🎨 Consistent UI** - Reusable component system with tabbed interfaces
 - **📖 Code Examples** - Tools include implementation examples in multiple languages
 - **📚 Reference Guides** - Comprehensive guides with syntax highlighting and organized sections
+- **🔗 URL Persistence** - Tab states are preserved in URLs for easy sharing
+- **🏷️ Tagged Tools** - Each tool displays relevant tags for better discovery
 
 ## Contributing Guidelines
 

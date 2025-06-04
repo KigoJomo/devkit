@@ -42,6 +42,14 @@ export const tools: Tool[] = [
     category: 'Web',
     tags: ['url', 'compare', 'analysis', 'web', 'development'],
   },
+  {
+    id: 'format-price',
+    name: 'Price Formatter',
+    description: 'Format prices with currency symbols, thousands separators, and decimals',
+    href: '/price-formatter',
+    category: 'Web',
+    tags: ['price', 'format', 'currency', 'web', 'development'],
+  },
 ];
 
 export function searchTools(query: string): Tool[] {

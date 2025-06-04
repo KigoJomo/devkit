@@ -26,7 +26,7 @@ export default function Home() {
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold">Random Tools 😝</h1>
         <p className="text-foreground-light">
-          A collection of useful utilities and tools
+          A collection of useful tools, snippets, and utilities for devs and enthusiasts
         </p>
       </div>
 

@@ -1,6 +1,7 @@
 import BackToTools from '@/lib/components/navigation/BackToTools';
 import MarkdownRenderer from '@/lib/components/ui/MarkdownRenderer';
 import Tabs, { Tab } from '@/lib/components/ui/Tabs';
+import { tools } from '@/lib/config/tools';
 import {
   basicGitCommands,
   sshSetupGuide,
@@ -42,13 +43,31 @@ const GitReferencePage = () => {
     },
   ];
 
+  const tool = tools.find((tool) => tool.id === 'git-reference');
+
   return (
-    <section className="flex flex-col items-center gap-6">
+    <section className="flex flex-col items-center gap-8">
       <BackToTools />
 
-      <div className="text-center">
+      <div className="flex flex-col items-center gap-2">
         <h1>Git Reference</h1>
-        <p className="text-foreground-light mt-2">
+        {tool && (
+          <div className='flex items-center gap-2'>
+            <span className="text-xs font-light text-foreground-light">
+              Tags:
+            </span>
+            <div className="flex items-center gap-1">
+              {tool.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs font-light text-foreground-light px-2 py-0.5 bg-background-dark rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+        <p className="text-foreground-light">
           Quick reference for Git commands, SSH setup, and GitHub CLI
         </p>
       </div>

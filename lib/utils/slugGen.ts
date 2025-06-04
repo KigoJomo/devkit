@@ -16,7 +16,7 @@ export function slugify(text: string): string {
 
 export const slugifyTypescript: string = `
 \`\`\` typescript
-export function slugify(text: string): string {
+function slugify(text: string): string {
   return text
     .toLowerCase()
     .trim()
