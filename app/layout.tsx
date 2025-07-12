@@ -13,7 +13,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://randomtools.vercel.app'),
+  metadataBase: new URL('https://tools.aqutte.co.ke'),
   title: 'Random Tools',
   description:
     'A collection of random tools, snippets, and utilities for devs and enthusiasts',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       'A collection of random tools, snippets, and utilities for devs and enthusiasts',
     type: 'website',
-    url: 'https://randomtools.vercel.app',
+    url: 'https://tools.aqutte.co.ke',
     siteName: 'Random Tools',
     images: '/images/og.webp',
   },

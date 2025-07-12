@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     description:
       'Generate slugs from your text or get the slugify code in different programming languages.',
     type: 'website',
-    url: 'https://randomtools.vercel.app/slug-generator',
+    url: 'https://tools.aqutte.co.ke/slug-generator',
     siteName: 'Random Tools',
-    images: [{ url: 'https://randomtools.vercel.app/images/og.webp' }],
+    images: [{ url: 'https://tools.aqutte.co.ke/images/og.webp' }],
   },
 };
 

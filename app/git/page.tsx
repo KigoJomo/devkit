@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     title: 'Git Reference',
     description: 'Quick reference for Git commands, SSH setup, and GitHub CLI',
     type: 'website',
-    url: 'https://randomtools.vercel.app/git',
+    url: 'https://tools.aqutte.co.ke/git',
     siteName: 'Random Tools',
-    images: [{ url: 'https://randomtools.vercel.app/images/og.webp' }],
+    images: [{ url: 'https://tools.aqutte.co.ke/images/og.webp' }],
   },
 }
 

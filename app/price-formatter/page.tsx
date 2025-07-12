@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     description:
       'Format prices in different currencies - get the price formatter code in different programming languages.',
     type: 'website',
-    url: 'https://randomtools.vercel.app/price-formatter',
+    url: 'https://tools.aqutte.co.ke/price-formatter',
     siteName: 'Random Tools',
-    images: [{ url: 'https://randomtools.vercel.app/images/og.webp' }],
+    images: [{ url: 'https://tools.aqutte.co.ke/images/og.webp' }],
   },
 };
 

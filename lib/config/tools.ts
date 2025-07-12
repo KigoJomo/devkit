@@ -35,12 +35,12 @@ export const tools: Tool[] = [
     tags: ['git', 'version-control', 'ssh', 'github', 'cli', 'reference'],
   },
   {
-    id: 'compare-urls',
-    name: 'Compare URLs',
-    description: 'Compare two URLs and analyze their differences in detail',
-    href: '/compare-urls',
+    id: "url-normalizer",
+    name: "Url Normalizer",
+    description: "Normalize URLs by transforming them to a standard format, e.g., example.com to https://www.example.com",
+    href: "/url-normalizer",
     category: 'Web',
-    tags: ['url', 'compare', 'analysis', 'web', 'development'],
+    tags: ['url', 'normalizer', 'web', 'development', 'standardization'],
   },
   {
     id: 'format-price',
@@ -49,6 +49,14 @@ export const tools: Tool[] = [
     href: '/price-formatter',
     category: 'Web',
     tags: ['price', 'format', 'currency', 'web', 'development'],
+  },
+  {
+    id: 'compare-urls',
+    name: 'Compare URLs',
+    description: 'Compare two URLs and analyze their differences in detail',
+    href: '/compare-urls',
+    category: 'Web',
+    tags: ['url', 'compare', 'analysis', 'web', 'development'],
   },
 ];
 
