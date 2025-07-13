@@ -24,9 +24,9 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-8 min-h-screen">
       <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Random Tools 😝</h1>
+        <h1 className="text-4xl font-bold">DevKit</h1>
         <p className="text-foreground-light">
-          A collection of useful tools, snippets, and utilities for devs and enthusiasts
+          Essential utilities for developers with ready-to-use code examples
         </p>
       </div>
 
@@ -71,11 +71,11 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-foreground-light/80 max-w-md">
-                Contribute your ideas or help build new tools for the community.
-                All contributions are welcome!
+                Contribute your ideas or help build new developer utilities. All
+                contributions are welcome!
               </p>
               <Button
-                href="https://github.com/KigoJomo/random-tools"
+                href="https://github.com/KigoJomo/devkit"
                 target="_blank"
                 variant="outline"
                 className="flex items-center gap-2">

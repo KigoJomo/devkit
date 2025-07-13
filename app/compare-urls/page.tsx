@@ -71,9 +71,10 @@ const CompareUrlsPage = () => {
         {/* Header */}
         <div className="text-center space-y-4">
           <BackToTools />
-          <h1 className="text-3xl font-bold">Compare URLs</h1>
+          <h1 className="text-3xl font-bold">URL Comparison Tool</h1>
           <p className="text-foreground-light">
-            Compare two URLs and analyze their structural differences
+            Compare and analyze differences between two URLs in detail - perfect
+            for debugging and development
           </p>
         </div>
 

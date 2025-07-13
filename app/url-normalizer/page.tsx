@@ -13,16 +13,16 @@ import {
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'URL Normalizer | Random Tools',
+  title: 'URL Normalizer | DevKit',
   description:
-    'Normalize URLs by transforming them to a standard format, e.g., example.com to https://www.example.com',
+    'Standardize URLs with protocol and www prefix normalization - includes implementation code in multiple languages.',
   openGraph: {
-    title: 'URL Normalizer',
+    title: 'URL Normalizer | DevKit',
     description:
-      'Normalize URLs by transforming them to a standard format, e.g., example.com to https://www.example.com',
+      'Standardize URLs with protocol and www prefix normalization - includes implementation code in multiple languages.',
     type: 'website',
     url: 'https://tools.aqutte.co.ke/url-normalizer',
-    siteName: 'Random Tools',
+    siteName: 'DevKit',
     images: [{ url: 'https://tools.aqutte.co.ke/images/og.webp' }],
   },
 };
@@ -65,7 +65,7 @@ const UrlNormalizePage = () => {
 
         <Normalizer />
       </div>
-      
+
       <div className="w-full flex items-center gap-2">
         <div className="w-full h-[1px] bg-foreground-light/30" />
         <span className="text-foreground-light text-nowrap">

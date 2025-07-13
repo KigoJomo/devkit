@@ -1,6 +1,7 @@
 {
-  "name": "random-tools",
+  "name": "devkit",
   "version": "0.1.0",
+  "description": "Essential utilities for developers with ready-to-use code examples",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

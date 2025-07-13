@@ -1,134 +1,128 @@
-# Random Tools 😝
+# DevKit
 
-> _Because apparently the internet doesn't have enough random utility websites already..._
+> Essential utilities for developers with ready-to-use code examples
 
-Welcome to **Random Tools** - a delightfully chaotic collection of utilities that you never knew you needed until you desperately did. This is where useful tools come to live their best life, one TypeScript component at a time.
+**DevKit** is a comprehensive collection of developer utilities designed to boost your development productivity. Each tool provides not just functionality, but also implementation code examples in multiple programming languages, making it easy to integrate solutions into your own projects.
 
-## What's This All About?
+## What's DevKit?
 
-This project is a growing arsenal of web-based tools that solve those oddly specific problems you encounter when you're deep in development hell. Currently featuring:
+DevKit solves common development tasks with clean, efficient tools that provide immediate value. Whether you need to generate URL slugs, format prices, normalize URLs, or reference Git commands, DevKit has you covered with both interactive tools and copy-paste code solutions.
 
-- **🔗 Slug Generator** - Transform any text into URL-friendly slugs with implementation code in TypeScript, JavaScript, and Python
-- **📚 Git Reference** - Complete Git command reference with SSH setup, GitHub CLI guides, and advanced workflows
-- **🔍 URL Comparison Tool** - Compare two URLs and analyze their differences in detail
-- **🌐 URL Normalizer** - Normalize URLs by transforming them to a standard format with protocol and www prefix
-- **💰 Price Formatter** - Format prices with currency symbols, thousands separators, and decimals in multiple programming languages
+### Current Tools
 
-_Growing stronger by the day!_
+- **🔗 Slug Generator** - Transform text into URL-friendly slugs with TypeScript, JavaScript, and Python implementations
+- **📚 Git Reference** - Comprehensive Git command reference with SSH setup guides and GitHub CLI workflows
+- **🔍 URL Comparison Tool** - Compare and analyze differences between two URLs in detail
+- **🌐 URL Normalizer** - Standardize URLs with protocol and www prefix normalization
+- **💰 Price Formatter** - Format prices with currency symbols and locale-specific formatting
 
-## The Grand Vision
+## Key Features
 
-This humble collection has **tremendous room for growth** but is steadily becoming more useful. The architecture is built to scale from "meh" to "actually useful" with minimal effort. Each tool is:
+- **Ready-to-use Code Examples** - Every tool includes implementation code in multiple programming languages
+- **Copy-Paste Solutions** - Grab the code you need and integrate it immediately
+- **Interactive Tools** - Test functionality before implementing
+- **Professional Grade** - Production-ready code with proper error handling
+- **Cross-Platform** - Works everywhere, responsive design included
 
-- ✨ **Modular** - Drop in new tools like Tetris blocks
-- 🎨 **Styled with TailwindCSS** - Because consistency is key
-- 🔧 **TypeScript Everything** - Type safety or bust
-- ♿ **Accessible** - We don't discriminate against screen readers
-- 📱 **Responsive** - Works on your phone, tablet, and that ancient laptop
+## Technology Stack
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **TailwindCSS** - Utility-first styling
+- **React Markdown** - Rich content rendering
+- **Framer Motion** - Smooth animations
+- **React Syntax Highlighter** - Beautiful code highlighting
 
 ## Getting Started
 
-_The usual Next.js dance:_
-
 ```bash
-# Clone this masterpiece
-git clone https://github.com/KigoJomo/random-tools
-cd random-tools
+# Clone the repository
+git clone https://github.com/KigoJomo/devkit
+cd devkit
 
-# Install the dependencies (there are many)
+# Install dependencies
 npm install
 
-# Fire up the development server
+# Start the development server
 npm run dev
 ```
 
-Visit `http://localhost:3000` and witness the glory of a clean search interface with five functional tools.
+Open `http://localhost:3000` to access DevKit locally.
 
 ## Contributing
 
-**This project NEEDS contributors** like a plant needs water. We're making progress but there's always room for more useful tools.
+DevKit thrives on community contributions. We're always looking for new tools that solve common development problems.
 
-### How to Add a New Tool:
+### How to Add a New Tool
 
-1. **Create your utility functions** in `lib/utils/yourTool.ts`
-2. **Build the page** in `app/your-tool/page.tsx`
-3. **Add it to the registry** in `lib/config/tools.ts` with proper metadata
-4. **Create any needed UI components** in `lib/components/ui/`
-5. **Pat yourself on the back** - you've just made this project significantly more useful
+1. **Create utility functions** in `lib/utils/yourTool.ts`
+2. **Build the page component** in `app/your-tool/page.tsx`
+3. **Register the tool** in `lib/config/tools.ts` with proper metadata
+4. **Add UI components** in `lib/components/ui/` if needed
+5. **Submit a pull request** with your improvements
 
-### Tool Ideas (Because We're Always Hungry for More):
+### Tool Ideas
 
-- Password generators with strength indicators
-- Color palette generators and extractors
-- JSON formatters/validators with syntax highlighting
-- Base64 encoders/decoders for text and files
-- QR code generators with customization
-- Text diff tools with multiple view modes
-- Hash generators (MD5, SHA256, etc.)
-- Lorem ipsum generators
-- UUID generators
-- Timestamp converters
-- CSS minifiers and formatters
-- Regular expression testers with examples
-- _Literally anything you wish existed when you're deep in development hell_
+We're actively seeking contributions for these utilities:
+
+- **Security Tools**
+
+  - Password generators with strength indicators
+  - Hash generators (MD5, SHA256, etc.)
+  - JWT token decoders
+  - Base64 encoders/decoders
+
+- **Data Tools**
+
+  - JSON formatters and validators
+  - CSV to JSON converters
+  - XML formatters
+  - YAML validators
+
+- **Web Development**
+
+  - Color palette generators
+  - CSS minifiers and formatters
+  - Regular expression testers
+  - Lorem ipsum generators
+
+- **General Utilities**
+  - UUID generators
+  - QR code generators
+  - Timestamp converters
+  - Text diff tools
+
+### Development Guidelines
+
+- Use **TypeScript** for all code with proper type annotations
+- Follow **modular architecture** - each tool should be self-contained
+- Include **code examples** in multiple programming languages
+- Ensure **responsive design** with TailwindCSS
+- Write **accessible HTML** with semantic markup
+- Handle **errors gracefully** with user-friendly messages
 
 ## Project Structure
 
 ```
 ├── app/                    # Next.js app router pages
-│   ├── compare-urls/       # URL comparison tool page
-│   ├── slug-generator/     # Slug generator tool page
-│   ├── git/               # Git reference guide page
-│   ├── price-formatter/   # Price formatter tool page
-│   ├── url-normalizer/    # URL normalizer tool page
-│   ├── loading.tsx        # Global loading component
-│   └── page.tsx           # Homepage with search and tool listing
+│   ├── compare-urls/       # URL comparison tool
+│   ├── slug-generator/     # Slug generator with examples
+│   ├── git/               # Git reference guide
+│   ├── price-formatter/   # Price formatting utilities
+│   ├── url-normalizer/    # URL normalization tool
+│   └── page.tsx           # Homepage with tool discovery
 ├── lib/
 │   ├── components/         # Reusable React components
-│   │   ├── navigation/    # Navigation components (BackToTools)
-│   │   └── ui/            # UI components (Input, ToolCard, Tabs, etc.)
+│   │   ├── navigation/    # Navigation components
+│   │   └── ui/            # UI component library
 │   ├── config/            # Tool registry and configuration
-│   │   └── tools.ts       # Central tool registry with search
-│   └── utils/             # Utility functions for tools
+│   │   └── tools.ts       # Central tool registry
+│   └── utils/             # Tool implementation utilities
 │       ├── gitContent.ts  # Git reference content
-│       ├── priceFormat.ts # Price formatting utilities
+│       ├── priceFormat.ts # Price formatting functions
 │       ├── slugGen.ts     # Slug generation utilities
-│       └── urlNormalize.ts # URL normalization utilities
-└── public/                # Static assets
+│       └── urlNormalize.ts # URL normalization functions
 ```
-
-## Tech Stack
-
-- **Next.js 15** - App router with React Server Components
-- **React 19** - The latest and greatest
-- **TypeScript 5** - Type safety is not optional
-- **TailwindCSS 4** - Utility-first styling with typography plugin
-- **Framer Motion** - For smooth animations
-- **Lucide React** - Beautiful, consistent icons
-- **React Markdown** - For rendering code examples and documentation
-- **React Syntax Highlighter** - Code syntax highlighting
-
-## Features
-
-- **🔍 Smart Search** - Search tools by name, description, category, or tags
-- **📱 Fully Responsive** - Works beautifully on all device sizes
-- **⚡ Fast Development** - Hot reload with Turbopack
-- **🎨 Consistent UI** - Reusable component system with tabbed interfaces
-- **📖 Code Examples** - Tools include implementation examples in multiple languages
-- **📚 Reference Guides** - Comprehensive guides with syntax highlighting and organized sections
-- **🔗 URL Persistence** - Tab states are preserved in URLs for easy sharing
-- **🏷️ Tagged Tools** - Each tool displays relevant tags for better discovery
-
-## Contributing Guidelines
-
-- Write TypeScript with proper type annotations
-- Follow the existing component patterns in `lib/components/ui/`
-- Add your tool to the registry in `lib/config/tools.ts` with appropriate tags
-- Use TailwindCSS classes for styling (avoid inline styles)
-- Test your tool locally before submitting
-- Keep it accessible (semantic HTML, proper ARIA labels)
-- Handle errors gracefully
-- Don't break things (please)
 
 ## Development Scripts
 
@@ -139,10 +133,18 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
+## Deployment
+
+DevKit is deployed at [https://tools.aqutte.co.ke](https://tools.aqutte.co.ke) and automatically updates with changes to the main branch.
+
 ## License
 
-MIT - Because sharing is caring and lawyers are expensive.
+This project is open source and available under the MIT License.
+
+## Support
+
+Found a bug or have a feature request? Please open an issue on GitHub or contribute a pull request.
 
 ---
 
-_Built with ❤️ and a healthy dose of procrastination. Now stop reading and start contributing!_
+**DevKit** - Making developer productivity our priority, one utility at a time.
