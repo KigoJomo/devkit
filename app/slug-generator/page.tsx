@@ -11,16 +11,16 @@ import { Metadata } from 'next';
 import { ArrowDown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Slug Generator | Random Tools',
+  title: 'Slug Generator | DevKit',
   description:
-    'Generate slugs from your text or get the slugify code in different programming languages.',
+    'Transform text into URL-friendly slugs with implementation code in TypeScript, JavaScript, and Python.',
   openGraph: {
-    title: 'Slug Generator',
+    title: 'Slug Generator | DevKit',
     description:
-      'Generate slugs from your text or get the slugify code in different programming languages.',
+      'Transform text into URL-friendly slugs with implementation code in TypeScript, JavaScript, and Python.',
     type: 'website',
     url: 'https://tools.aqutte.co.ke/slug-generator',
-    siteName: 'Random Tools',
+    siteName: 'DevKit',
     images: [{ url: 'https://tools.aqutte.co.ke/images/og.webp' }],
   },
 };
@@ -51,7 +51,8 @@ export default function SlugGeneratorPage() {
       <div className="w-full flex flex-col items-center gap-4">
         <h1>Slug Generator</h1>
         <p className="px-4 py-1 bg-background-dark rounded-lg border border-foreground-light/40 flex items-center gap-1">
-          <span className='text-xs'>Demo</span> <ArrowDown size={12} className="" />
+          <span className="text-xs">Demo</span>{' '}
+          <ArrowDown size={12} className="" />
         </p>
         <SlugGen />
       </div>

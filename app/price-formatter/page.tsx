@@ -11,16 +11,16 @@ import {
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Price Formatter | Random Tools',
+  title: 'Price Formatter | DevKit',
   description:
-    'Format prices in different currencies - get the price formatter code in different programming languages.',
+    'Format prices with currency symbols and locale-specific formatting - get implementation code in multiple programming languages.',
   openGraph: {
-    title: 'Price Formatter',
+    title: 'Price Formatter | DevKit',
     description:
-      'Format prices in different currencies - get the price formatter code in different programming languages.',
+      'Format prices with currency symbols and locale-specific formatting - get implementation code in multiple programming languages.',
     type: 'website',
     url: 'https://tools.aqutte.co.ke/price-formatter',
-    siteName: 'Random Tools',
+    siteName: 'DevKit',
     images: [{ url: 'https://tools.aqutte.co.ke/images/og.webp' }],
   },
 };

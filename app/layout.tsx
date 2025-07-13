@@ -14,16 +14,16 @@ const lexend = Lexend({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tools.aqutte.co.ke'),
-  title: 'Random Tools',
+  title: 'DevKit - Essential utilities for developers',
   description:
-    'A collection of random tools, snippets, and utilities for devs and enthusiasts',
+    'Essential developer utilities with ready-to-use code examples. Boost your development productivity with professional-grade tools for common dev tasks.',
   openGraph: {
-    title: 'Random Tools',
+    title: 'DevKit - Essential utilities for developers',
     description:
-      'A collection of random tools, snippets, and utilities for devs and enthusiasts',
+      'Essential developer utilities with ready-to-use code examples. Boost your development productivity with professional-grade tools for common dev tasks.',
     type: 'website',
     url: 'https://tools.aqutte.co.ke',
-    siteName: 'Random Tools',
+    siteName: 'DevKit',
     images: '/images/og.webp',
   },
 };

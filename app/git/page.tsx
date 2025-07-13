@@ -11,17 +11,19 @@ import {
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Git Reference | Random Tools',
-  description: 'Quick reference for Git commands, SSH setup, and GitHub CLI',
+  title: 'Git Reference | DevKit',
+  description:
+    'Comprehensive Git command reference with SSH setup guides and GitHub CLI workflows',
   openGraph: {
-    title: 'Git Reference',
-    description: 'Quick reference for Git commands, SSH setup, and GitHub CLI',
+    title: 'Git Reference | DevKit',
+    description:
+      'Comprehensive Git command reference with SSH setup guides and GitHub CLI workflows',
     type: 'website',
     url: 'https://tools.aqutte.co.ke/git',
-    siteName: 'Random Tools',
+    siteName: 'DevKit',
     images: [{ url: 'https://tools.aqutte.co.ke/images/og.webp' }],
   },
-}
+};
 
 const GitReferencePage = () => {
   const gitTabs: Tab[] = [
@@ -52,7 +54,7 @@ const GitReferencePage = () => {
       <div className="flex flex-col items-center gap-2">
         <h1>Git Reference</h1>
         {tool && (
-          <div className='flex items-center gap-2'>
+          <div className="flex items-center gap-2">
             <span className="text-xs font-light text-foreground-light">
               Tags:
             </span>
@@ -68,7 +70,8 @@ const GitReferencePage = () => {
           </div>
         )}
         <p className="text-foreground-light">
-          Quick reference for Git commands, SSH setup, and GitHub CLI
+          Comprehensive Git command reference with SSH setup guides and GitHub
+          CLI workflows
         </p>
       </div>
 
