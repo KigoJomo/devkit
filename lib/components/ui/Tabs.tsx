@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { FC, ReactNode, useEffect, useState } from 'react';
+import { FC, ReactNode } from 'react';
 
 export interface Tab {
   title: string | ReactNode;
@@ -14,22 +14,25 @@ interface TabsProps {
 }
 
 const Tabs: FC<TabsProps> = ({ tabs, className = '' }) => {
-  const [activeTab, setActiveTab] = useState<Tab | null>(null);
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
+  const getTabParam = (tab: Tab, index: number) =>
+    typeof tab.title === 'string' ? tab.title : String(index);
 
-  useEffect(() => {
-    const tabFromUrl = searchParams.get('tab');
+  const tabFromUrl = searchParams.get('tab');
+  const matchedTabIndex = tabs.findIndex(
+    (tab, index) => getTabParam(tab, index) === tabFromUrl
+  );
+  const activeTabIndex = matchedTabIndex >= 0 ? matchedTabIndex : 0;
+  const activeTab = tabs[activeTabIndex];
+  const activeTabParam = getTabParam(activeTab, activeTabIndex);
 
-    const tabToSet = tabs.find((tab) => tab.title === tabFromUrl);
-
-    if (tabFromUrl && tabToSet) {
-      setActiveTab(tabToSet);
-    } else {
-      setActiveTab(tabs[0]);
-    }
-  }, [tabs, searchParams]);
+  const handleTabChange = (tab: Tab, index: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('tab', getTabParam(tab, index));
+    router.push(`${pathname}?${params.toString()}`);
+  };
 
   return (
     <div
@@ -40,14 +43,11 @@ const Tabs: FC<TabsProps> = ({ tabs, className = '' }) => {
           <button
             key={index}
             className={`py-1 px-3 rounded-t-md ${
-              activeTab === tab
+              getTabParam(tab, index) === activeTabParam
                 ? 'bg-accent/20 border border-b-0 border-foreground-light/20'
                 : ''
             }`}
-            onClick={() => {
-              router.push(`${pathname}?tab=${tab.title}`);
-              setActiveTab(tab);
-            }}>
+            onClick={() => handleTabChange(tab, index)}>
             {typeof tab.title === 'string' ? (
               <p className="!text-xs">{tab.title}</p>
             ) : (
