@@ -6,7 +6,7 @@ import { tools, searchTools } from '@/lib/config/tools';
 import ToolCard from '@/lib/components/ui/ToolCard';
 import Button from '@/lib/components/ui/Button';
 import Card from '@/lib/components/ui/Card';
-import { Github, Plus } from 'lucide-react';
+import { ExternalLink, Plus } from 'lucide-react';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -79,7 +79,7 @@ export default function Home() {
                 target="_blank"
                 variant="outline"
                 className="flex items-center gap-2">
-                <Github className="w-4 h-4" />
+                <ExternalLink className="w-4 h-4" />
                 Contribute on GitHub
               </Button>
             </div>
