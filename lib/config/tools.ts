@@ -9,6 +9,24 @@ export interface Tool {
 
 export const tools: Tool[] = [
   {
+    id: 'uuid-generator',
+    name: 'UUID Generator',
+    description:
+      'Generate RFC 4122 v4 UUIDs with built-in crypto APIs and copy-ready code examples',
+    href: '/uuid-generator',
+    category: 'Development',
+    tags: [
+      'uuid',
+      'id',
+      'generator',
+      'crypto',
+      'typescript',
+      'javascript',
+      'python',
+      'code-examples',
+    ],
+  },
+  {
     id: 'slug-generator',
     name: 'Slug Generator',
     description:
