@@ -4,16 +4,12 @@ import Button from '@/lib/components/ui/Button';
 import { CodeCopyButton } from '@/lib/components/ui/CodeCopyButton';
 import Input from '@/lib/components/ui/Input';
 import { slugify } from '@/lib/utils/slugGen';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const SlugGen = () => {
-  const [result, setResult] = useState('');
-  const [input, setInput] = useState('Generate a slug from any text');
-
-  useEffect(() => {
-    setResult(slugify(input));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const initialInput = 'Generate a slug from any text';
+  const [input, setInput] = useState(initialInput);
+  const [result, setResult] = useState(() => slugify(initialInput));
 
   return (
     <div className="w-full flex flex-col gap-4">
