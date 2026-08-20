@@ -1,15 +1,21 @@
 # DevKit
 
-Small Next.js utility app for common developer tasks.
+Small browser tools I use often enough to keep in one place.
 
-## Stack
+[Open DevKit](https://tools.aqutte.co.ke)
 
-- Next.js 16
-- React 19
-- Tailwind CSS 4
-- Bun for package management and runtime
+## Included tools
 
-## Local
+- Generate UUIDs in bulk and copy them.
+- Turn text into a URL-safe slug.
+- Compare two URLs by origin, path, query parameters, and hash.
+- Normalise URLs before storing or comparing them.
+- Format prices for a chosen locale and currency.
+- Look up common Git commands without digging through a longer cheat sheet.
+
+Everything except the Git reference runs in the browser. There are no accounts, database, or required environment variables.
+
+## Run it locally
 
 ```bash
 bun install
@@ -25,19 +31,4 @@ bun run lint
 bun run build
 ```
 
-## Tools
-
-- UUID generator
-- Slug generator
-- URL comparison
-- URL normalizer
-- Price formatter
-- Git reference
-
-## Deploy
-
-Vercel-compatible. `vercel.json` uses Bun for install/build.
-
-## Env
-
-No app env vars are required right now.
+The app uses Next.js, React, Tailwind CSS, and Bun. `vercel.json` keeps the Vercel install and build steps on Bun as well.
